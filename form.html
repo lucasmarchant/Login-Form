@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: cornflowerblue;
+            color: white;
+            font-family: Cambria, Arial, Helvetica, sans-serif;
+        }
+
+        section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 95vh;
+        }
+
+        form{
+
+            font-family: Arial;
+        }
+
+        form div {
+
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+            height: 45px;
+        }
+
+        form input, form textarea {
+            outline: unset;
+            padding: 20px;
+            min-width: 300px;
+            border: 1px solid cornflowerblue;
+            border-radius: 20px;
+        }
+
+        form input:focus, form textarea:focus {
+            background-color: wheat;
+        }
+
+        form input[type=submit] {
+            background-color: cornflowerblue;
+            color: white;
+            cursor: pointer;
+        }
+        
+        form label {
+            margin-left: 10px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    <header>
+        <h2>Formulário de Cadastro</h2>
+    </header>
+
+    <section> 
+    
+    <form>
+        <div>
+            <label>Nome:</label>
+            <input type="text" placeholder="Digite seu nome" id="nome" required/>
+        </div>
+            
+        <div>
+            <label>Sobrenome:</label>
+            <input type="text" placeholder="Digite seu sobrenome" id="sobrenome" required/>
+        </div>
+
+        <div>   
+            <label>Idade:</label>
+            <input type="number" placeholder="Digite sua idade" id="idade" required/>
+        </div>
+
+
+        <div>
+            <label>Sexo:</label>
+            <select name="Sexo" id="sexo">
+                <option value="N">Não informado
+                <option value="F">Feminino
+                <option value="M">Masculino
+            </select>
+        </div>
+
+        <div>
+            <label>Data de nascimento:</label>
+            <input type="date" id="datanascimento" required/>
+        </div>
+
+        <div>
+            <input type="submit" value="Salvar Dados" onclick="exibeDados();">
+        </div>
+
+        </form>
+
+    </section>
+
+
+    <script>
+        
+        var nome = document.querySelector("nome");
+        
+        function exibeDados() {
+            
+            alert(nome.value);
+      
+        }
+
+       
+
+    </script>
+
+</body>
+</html>
